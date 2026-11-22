@@ -6,7 +6,7 @@
   "private": true,
   "license": "UNLICENSED",
   "prisma": {
-    "seed": "ts-node --transpile-only prisma/seed.ts"
+    "seed": "npx tsx prisma/seed.ts"
   },
   "scripts": {
     "prebuild": "rimraf dist",
@@ -25,8 +25,8 @@
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "jest --config ./test/jest-e2e.json",
     "ts-node": "ts-node --compiler-options '{\"module\":\"CommonJS\"}'",
-    "seed": "ts-node --transpile-only prisma/seed.ts",
-    "seed:publicacao": "ts-node --transpile-only prisma/seed-publicacao.ts"
+    "seed": "npx tsx prisma/seed.ts",
+    "seed:publicacao": "npx tsx prisma/seed-publicacao.ts"
   },
   "dependencies": {
     "@langchain/classic": "^1.0.43",
